@@ -3860,6 +3860,10 @@
       "baseline": "5.98.0",
       "port-version": 0
     },
+    "kf5kirigami": {
+      "baseline": "5.98.0",
+      "port-version": 0
+    },
     "kf5newstuff": {
       "baseline": "5.98.0",
       "port-version": 0
