@@ -16,7 +16,7 @@ vcpkg_cmake_configure(
 )
 
 vcpkg_cmake_install()
-vcpkg_cmake_config_fixup(PACKAGE_NAME KF5Kirigami CONFIG_PATH lib/cmake/KF5Kirigami)
+vcpkg_cmake_config_fixup(PACKAGE_NAME KF5Kirigami CONFIG_PATH lib/cmake/KF5Kirigami2)
 vcpkg_copy_pdbs()
 
 file(APPEND "${CURRENT_PACKAGES_DIR}/tools/${PORT}/qt.conf" "Data = ../../share")
