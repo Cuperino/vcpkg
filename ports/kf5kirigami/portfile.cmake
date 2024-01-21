@@ -12,14 +12,15 @@ vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
     OPTIONS
         -DBUILD_TESTING=OFF
+        -DBUILD_EXAMPLES=OFF
         -DKDE_INSTALL_QMLDIR=qml
+        -DKDE_INSTALL_PLUGINDIR=plugins
+        -DKDE_INSTALL_QTPLUGINDIR=plugins
 )
 
 vcpkg_cmake_install()
-vcpkg_cmake_config_fixup(PACKAGE_NAME KF5Kirigami CONFIG_PATH "lib/cmake/KF5Kirigami2")
+vcpkg_cmake_config_fixup(PACKAGE_NAME KF5Kirigami2 CONFIG_PATH lib/cmake/KF5Kirigami2)
 vcpkg_copy_pdbs()
-
-file(APPEND "${CURRENT_PACKAGES_DIR}/tools/${PORT}/qt.conf" "Data = ../../share")
 
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")
