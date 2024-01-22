@@ -19,7 +19,8 @@ vcpkg_cmake_configure(
 )
 
 vcpkg_cmake_install()
-vcpkg_cmake_config_fixup(PACKAGE_NAME KF5Kirigami2 CONFIG_PATH lib/cmake/KF5Kirigami2)
+vcpkg_cmake_config_fixup(PACKAGE_NAME KF5Kirigami2 CONFIG_PATH lib/cmake/KF5Kirigami2 DO_NOT_DELETE_PARENT_CONFIG_PATH)
+vcpkg_cmake_config_fixup(PACKAGE_NAME KF5Kirigami CONFIG_PATH lib/cmake/KF5Kirigami2)
 vcpkg_copy_pdbs()
 
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
