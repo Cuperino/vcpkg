@@ -8,6 +8,7 @@ vcpkg_from_github(
 # Prevent KDEClangFormat from writing to source effectively blocking parallel configure
 file(WRITE "${SOURCE_PATH}/.clang-format" "DisableFormat: true\nSortIncludes: false\n")
 
+configure_file("${CMAKE_CURRENT_LIST_DIR}/KF5Kirigami2Config.cmake.in" "${SOURCE_PATH}/KF5Kirigami2Config.cmake" @ONLY)
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
     OPTIONS
